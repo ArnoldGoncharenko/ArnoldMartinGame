@@ -14,7 +14,7 @@ namespace GameCore
 		item sword("Shitty sword", 100, "large", "Weapon", 10, 10);
 		item* swordPointer = &sword;
 		inventory.push_front(sword);
-		delete swordPointer;
+		//delete swordPointer;
 		maxSize = size;
 	}
 
@@ -61,7 +61,8 @@ namespace GameCore
 
 	ostream& operator<<(ostream& os, item& c)
 	{
-		return os << c.getItemName();
+		return os << "\n\n Item name: " << c.getItemName() << "\n Durability: " << c.getDurability()
+			<< "\n Item type: " << c.getType() << "\n Damage: " << c.getDamage();;
 	}
 
 }
